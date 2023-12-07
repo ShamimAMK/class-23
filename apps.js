@@ -138,7 +138,71 @@ myMap.set("subject", "math");
 // myMap.clear();
 // console.log(myMap);
 
-for (const entry of myMap) {
-  console.log(entry);
+// for (const entry of myMap) {
+//   console.log(entry);
+// }
+
+for (const [key, value] of myMap) {
+  console.log(key, value);
 }
 // console.log(myMap);
+
+//Problem2: zoo
+
+const animals = new Map();
+// [[tiger]];
+
+const addAnimal = (species) => {
+  if (animals.has(species)) {
+    const count = animals.get(species);
+    animals.set(species, count + 1);
+  } else {
+    animals.set(species, 1);
+  }
+};
+
+const removeAnimal = (species) => {
+  if (animals.has(species)) {
+    let count = animals.get(species);
+    animals.set(species, count - 1);
+  } else {
+    console.log(`"${species}" not available`);
+  }
+};
+
+addAnimal("tiger");
+addAnimal("tiger");
+addAnimal("tiger");
+addAnimal("lion");
+addAnimal("lion");
+addAnimal("zebra");
+addAnimal("zebra");
+addAnimal("monkey");
+addAnimal("monkey");
+addAnimal("monkey");
+removeAnimal("tiger");
+removeAnimal("monkey");
+removeAnimal("Elephant");
+
+console.log(animals);
+
+//strings
+const str = "Hello World";
+
+// console.log(str.length);
+// console.log(str[1]);
+// console.log(str.charAt(1));
+// console.log(str.at(-1));
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// console.log(str.replace("World", "Universe"));
+// const splittedStr = str.split(" ");
+// console.log(splittedStr);
+
+// const splittedStr = str.split("");
+// console.log(splittedStr);
+
+//str2
+const str2 = "     Hello I'm an empty space           ";
+console.log(str2.trim());
+// trim is working only beginning and end of the line only
