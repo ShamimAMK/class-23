@@ -72,43 +72,73 @@ for (const entr of entries) {
 
 // console.log(mySet);
 
-//Rain, Boat & Umbrella
+// //Rain, Boat & Umbrella
 
-const manWithBoat = new Set(["Tahia", "Kaushik", "Shamim", "Ariful"]);
-const manWithUmbrella = new Set([
-  "Tahia",
-  "Mamun",
-  "Sharmin",
-  "Ariful",
-  "Apurba",
+// const manWithBoat = new Set(["Tahia", "Kaushik", "Shamim", "Ariful"]);
+// const manWithUmbrella = new Set([
+//   "Tahia",
+//   "Mamun",
+//   "Sharmin",
+//   "Ariful",
+//   "Apurba",
+// ]);
+
+// // find man with both boat & umbrella
+
+// function findmanWithBoth(boat, umbrella) {
+//   const manWithBothBU = new Set();
+
+//   //   for (const person of boat) {
+//   //     if (umbrella.has(person)) {
+//   //       manWithBothBU.add(person);
+//   //     }
+//   //   }
+//   //   return manWithBothBU;
+//   // }
+
+//   for (const person of umbrella) {
+//     if (boat.has(person)) {
+//       manWithBothBU.add(person);
+//     }
+//   }
+//   return manWithBothBU;
+// }
+
+// console.log(findmanWithBoth(manWithBoat, manWithUmbrella));
+
+// //find man with only umbrella
+// function findManWithOnlyUmbrella(boat, umbrella) {
+//   const manWithOnlyUmbrella = new Set();
+
+//   for (const person of umbrella) {
+//     if (!boat.has(person)) {
+//       manWithOnlyUmbrella.add(person);
+//     }
+//   }
+//   return manWithOnlyUmbrella;
+// }
+// console.log(findManWithOnlyUmbrella(manWithBoat, manWithUmbrella));
+
+//map
+const myMap = new Map([
+  ["name", "Mim"],
+  ["age", 20],
+  ["roll", 100],
+  [24, "temp"],
+  [true, "isRaining"],
 ]);
 
-// find man with both boat & umbrella
+myMap.set("subject", "math");
+// console.log(myMap.get(true));
 
-function findmanWithBoth(boat, umbrella) {
-  const manWithBothBU = new Set();
+// myMap.delete("age");
 
-  //   for (const person of boat) {
-  //     if (umbrella.has(person)) {
-  //       manWithBothBU.add(person);
-  //     }
-  //   }
-  //   return manWithBothBU;
-  // }
+// console.log(myMap);
 
-  for (const person of umbrella) {
-    if (boat.has(person)) {
-      manWithBothBU.add(person);
-    }
-  }
-  return manWithBothBU;
+// myMap.clear();
+// console.log(myMap);
+
+for (const entry of myMap) {
+  console.log(entry);
 }
-
-console.log(findmanWithBoth(manWithBoat, manWithUmbrella));
-
-//find man with only umbrella
-function findManWithOnlyUmrella(boat, umbrella) {
-  const manWithOnlyUmbrella = new Set();
-}
-
-console.log(findManWithOnlyUmrella(manWithBoat, manWithUmbrella));
+// console.log(myMap);
